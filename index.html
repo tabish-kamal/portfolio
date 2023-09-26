@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <title>Bootstrap</title>
+    <style>
+        #input {
+            -webkit-appearance: none;
+            position: relative;
+            width: 60px;
+            height: 30px;
+            background-image: url(https://i.postimg.cc/857jHw2q/Screenshot-2020-04-16-at-1-07-06-PM.png);
+            background-size: cover;
+            border-radius: 50px;
+            outline: none;
+            transition: background-image .90s;
+            box-shadow: 0px 2px 5px 1px gray;
+            top: 0.7rem;
+            right: 1rem;
+        }
+
+        #input:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 30px;
+            width: 30px;
+            background-color: navy;
+            border-radius: 50px;
+            transition: all .9s;
+            background-color: #F7CA33;
+        }
+
+        #input:checked {
+            background-image: url(https://i.postimg.cc/Hn0nstVK/Screenshot-2020-04-16-at-1-07-19-PM.png);
+            transition: background-image .90s;
+
+        }
+
+        #input:checked:before {
+            transform: translate(100%);
+            transition: all .9s;
+            background-color: #ECF0F3;
+        }
+
+        .dropdown-item:focus {
+            background-color: darkgray;
+        }
+        .dropdown-item:hover{
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar Starts -->
+    <nav class="navbar navbar-light bg-success sticky-top shadow-sm">
+        <div class="container-lg">
+            <a class="navbar-brand text-white fw-bold fs-2" href="#">T.A</a>
+            <div class="dropdown">
+                <input id="input" type="checkbox">
+                <button class="btn-nav btn btn-light px-3 " type="button" id="dropdownMenuButton1"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="fa fs-4">&#xf0c9;</i>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="#home">Home</a></li>
+                    <li><a class="dropdown-item" href="#about">About</a></li>
+                    <li><a class="dropdown-item" href="#services">Services</a></li>
+                    <li><a class="dropdown-item" href="#portfolio">Portfolio</a></li>
+                    <li><a class="dropdown-item" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar Ends -->
+    <div class="alert alert-success mt-3 alert-dismissible">
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        <strong>Welcome to my Profile!</strong>
+    </div>
+    <!-- Home Section Starts -->
+    <section class="home py-5 bg-light">
+        <div class="container-lg">
+            <div class="row min-vh-80 align-items-center align-content-center">
+                <div class="col-md-5">
+                    <div class="home-img text-center">
+                        <img src="Profile.jpg" class="border border-2 border-success rounded-circle mw-100 h-100 w-100"
+                            alt="profile image">
+                    </div>
+                </div>
+                <div class="col-md-7 mt-5 mt-md-0 order-md-first">
+                    <div class="home-text">
+                        <p class="text-muted mb-1">Hey! I'm</p>
+                        <h1 class="profession text-success text-uppercase fs-1 fw-bold">Web Developer</h1>
+                        <h2 class="name text-dark fs-3">Tabish Ansari</h2>
+                        <p class="mt-4 text-muted">“I love what I do and I do what my clients love & I work to create
+                            thoughtful and purposeful websites.”</p>
+                        <a href="#portfolio" class="btn btn-success px-3 mt-3">My Work</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Home Section Ends -->
+    <!-- About Section Starts -->
+    <section class="about bg-light py-5" id="about">
+        <div class="container-lg py-4">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="about-title text-center">
+                        <h2 class="heading fw-bold mb-5">About Me</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="about-text">
+                        <p class="text-muted m-0">Qualification:</p>
+                        <h3 class="study fs-4 m-0 text-success m-0">BE in Computer Science (2023)</h3>
+                        <p class="text-muted m-0">from</p>
+                        <h5 class="college fs-6">Dr. BAMU University, Aurangabad</h4>
+                            <p class="text-muted">Motivated, innovative,proficient,flexible and detail-oriented front
+                                end web developer leveraging project management and problem-solving skills for the
+                                Development of the Projects.</p>
+                    </div>
+                    <!-- <div class="row text-center text-uppercase my-3">
+                        <div class="col-sm-4">
+                            <div class="fact-item">
+                                <h4 class="fs-2 fw-bold">10+</h4>
+                                <p class="text-muted">Projects Completed</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="fact-item">
+                                <h4 class="fs-2 fw-bold">10+</h4>
+                                <p class="text-muted">Projects Completed</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="fact-item">
+                                <h4 class="fs-2 fw-bold">10+</h4>
+                                <p class="text-muted">Projects Completed</p>
+                            </div>
+                        </div>
+                    </div> -->
+                    <div class="row">
+                        <div class="col-lg-12 d-flex align-items-center">
+                            <a href="TabishAnsariCV.pdf" download="TabishAnsariCV"
+                                class="btn px-3 btn-success me-5">Download CV</a>
+                            <div class="social-links">
+                                <a href="https://www.instagram.com/kamal_ka_ladka/"><i class="fa fa-instagram me-2 fs-3"
+                                        style="color: palevioletred;"></i></a>
+                                <a href="https://www.linkedin.com/in/tabish-ansari-5bbbb3255"><i
+                                        class="fa fa-linkedin fs-3" style="color: blue;"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mt-5 mt-md-0">
+                    <div class="skill-items mb-4">
+                        <h3 class="skill fs-6">HTML</h3>
+                        <div class="progress" style="height: 5px;">
+                            <div class="progress-bar bg-success" role="progressbar" style="width: 90%;"
+                                aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                    <div class="skill-items mb-4">
+                        <h3 class="skill fs-6">CSS</h3>
+                        <div class="progress" style="height: 5px;">
+                            <div class="progress-bar bg-success" role="progressbar" style="width: 75%;"
+                                aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                    <div class="skill-items mb-4">
+                        <h3 class="skill fs-6">Javascript</h3>
+                        <div class="progress" style="height: 5px;">
+                            <div class="progress-bar bg-success" role="progressbar" style="width: 50%;"
+                                aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                    <div class="skill-items">
+                        <h3 class="skill fs-6">Bootstrap</h3>
+                        <div class="progress" style="height: 5px;">
+                            <div class="progress-bar bg-success" role="progressbar" style="width: 75%;"
+                                aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <!-- About Section Ends -->
+    <!-- Service section Starts -->
+    <section class="service py-5 bg-light" id="services">
+        <div class="container-lg py-4">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="about-title text-center">
+                        <h2 class="heading fw-bold mb-5">What I Do</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row text-center">
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="service-item shadow-sm p-4 rounded bg-white">
+                        <div class="icon my-3 text-success fs-1">
+                            <i class="fa fa-code"></i>
+                        </div>
+                        <h3 class="service-name fs-5 PY-2">Web Development</h3>
+                        <p class="service-detail text-muted">I utilize my skills in HTML, CSS, JavaScript, and Bootstrap
+                            to create user-friendly and efficient websites that are visually appealing and easy to
+                            navigate. all the requirements of the client.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="service-item shadow-sm p-4 rounded bg-white">
+                        <div class="icon my-3 text-success fs-1">
+                            <i class="fa fa-lightbulb-o"></i>
+                        </div>
+                        <h3 class="service-name fs-5 PY-2">Creative Design</h3>
+                        <p class="service-detail text-muted">I create user interfaces and user experiences that are both
+                            effective and appealing. However, I must also take into account the practicality of the
+                            design, making sure that it is functional and easy to use.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="service-item shadow-sm p-4 rounded bg-white">
+                        <div class="icon my-3 text-success fs-1">
+                            <i class="fa fa-database"></i>
+                        </div>
+                        <h3 class="service-name fs-5 PY-2">Data Analysis</h3>
+                        <p class="service-detail text-muted">I utilize my expertise in data analysis and statistical
+                            modeling to drive business decisions and I make use of Tableu. PowerBI and SQL to represent
+                            data in very effective way.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Service section Ends -->
+    <!-- Portfolio Section Starts -->
+    <div class="portfolio py-5 bg-light" id="portfolio">
+        <div class="container-lg py-4">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="section-title text-center">
+                        <h2 class="heading fw-bold mb-5">Latest Works</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-lg-4">
+                    <div class="portfolio-item">
+                        <img src="ss2.png" class="w-100 img-thumbnail border-0" alt="portfolio item 1">
+                        <div class="d-flex">
+                            <h3 class="project-name fs-5 my-2">CT Assignment</h3>
+                            <p class="mt-2 ms-3 mb-5"><a href="https://ctassignment.netlify.app/"
+                                    class="project-link text-success text-decoration-none">Click for Live Demo</a></p>
+                        </div> 
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="portfolio-item">
+                        <img src="ss1.png" class="w-100 img-thumbnail border-0" alt="portfolio item 1">
+                        <div class="d-flex">
+                            <h3 class="project-name fs-5 my-2">Busibud Assignment</h3>
+                            <p class="mt-2 ms-3 mb-5"><a href="https://busibudasssignment.netlify.app/"
+                                    class="project-link text-success text-decoration-none">Click for Live Demo</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="portfolio-item">
+                        <img src="ss3.png" class="w-100 img-thumbnail border-0" alt="portfolio item 1">
+                        <h3 class="project-name fs-5 my-2 mb-5">CNS Project</h3>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="portfolio-item">
+                        <img src="ss4.png" class="w-100 img-thumbnail border-0" alt="portfolio item 1">
+                        <h3 class="project-name fs-5 my-2 mb-5">Admin Dashboard</h3>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="portfolio-item">
+                        <img src="ss5.png" class="w-100 img-thumbnail border-0" alt="portfolio item 1">
+                        <h3 class="project-name fs-5 my-2 mb-5">7 Wonders Gallery</h3>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="portfolio-item">
+                        <img src="ss6.png" class="w-100 img-thumbnail border-0" alt="portfolio item 1">
+                        <h3 class="project-name fs-5 my-2">Ferrari Project</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Portfolio Section Ends -->
+    <!-- Freelancer Section Starts -->
+    <section class="freelancer py-5 bg-success">
+        <div class="container-lg py-4">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <p class="text-light fs-5">Do you have any project ?</p>
+                    <h2 class="fs-1 text-white mb-4">I'm Available For Freelancer Projects </h2>
+                    <a href="#contact" class="btn btn-outline-light">Hire Me</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Freelancer Section Ends -->
+    <!-- Contact section Starts -->
+    <section class="contact py-5 bg-light" id="contact">
+        <div class="container-lg py-4">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="section-title text-center">
+                        <h2 class="heading fw-bold mb-5">Contact Me</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-5">
+                    <div class="contact-item d-flex mb-3">
+                        <div class="icon fs-4 text-success">
+                            <i class="fa fa-envelope"></i>
+                        </div>
+                        <div class="text ms-3">
+                            <h3 class="cont-type fs-5">Email</h3>
+                            <p class="text-muted">tabishansari1234567890@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item d-flex mb-3">
+                        <div class="icon fs-4 text-success">
+                            <i class="fa fa-phone"></i>
+                        </div>
+                        <div class="text ms-3">
+                            <h3 class="cont-type fs-5">Phone</h3>
+                            <p class="text-muted">+91 8087704845</p>
+                        </div>
+                    </div>
+                    <div class="contact-item d-flex mb-3">
+                        <div class="icon fs-4 text-success">
+                            <i class="fa fa-map-marker"></i>
+                        </div>
+                        <div class="text ms-3">
+                            <h3 class="cont-type fs-5">Visit</h3>
+                            <p class="text-muted">Bhiwandi-421302, MH, India</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-7">
+                    <div class="contact-form">
+                        <form method="post" action="https://api.sheetmonkey.io/form/5tmppH1dbAtNvnU7opJ1MV">
+                            <div class="row">
+                                <div class="col-lg-6  mb-4">
+                                    <input type="text" placeholder="Your Name"  name="Name" required
+                                        class="form-control form-control-lg fs-6 border-0 shadow-sm">
+                                </div>
+                                <div class="col-lg-6  mb-4">
+                                    <input type="email" placeholder="Your Email" name="Email" required
+                                        class="form-control form-control-lg fs-6 border-0 shadow-sm">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12 mb-4">
+                                    <input type="text" placeholder="Subject" name="Subject"
+                                        class="form-control form-control-lg fs-6 border-0 shadow-sm">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12 mb-4">
+                                    <textarea rows="5" type="text" placeholder="Your Message" name="Message"
+                                        class="form-control form-control-lg fs-6 border-0 shadow-sm"></textarea>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <button class="btn btn-success px-3" type="submit">Send</button>
+                                </div>
+                            </div>
+                            <input type="hidden" name="Created" value="x-sheetmonkey-current-date-time" />
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Contact section Ends -->
+    <!-- Footer Section Starts -->
+    <footer class="footer border-top py-4">
+        <div class="container-lg">
+            <div class="row">
+                <div class="col-lg-12">
+                    <p class="footer-text m-0 text-center text-muted">&copy; 2023 Tabish Ansari's Portfolio</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Section Ends -->
+    <script>
+        $('#input').change(function () {
+            if ($(this).is(":checked")) {
+                $('.alert').addClass('alert-warning').removeClass('alert-success');
+                $('.navbar').addClass('bg-warning').removeClass('bg-success');
+                $('.btn').addClass('btn-warning').removeClass('btn-success');
+                $('.home').addClass('bg-dark').removeClass('bg-light');
+                $('.border').addClass('border-warning').removeClass('border-success');
+                $('.profession').addClass('text-warning').removeClass('text-success');
+                $('.name').addClass('text-white').removeClass('text-dark');
+                $('.about').addClass('bg-dark').removeClass('bg-light');
+                $('.heading').addClass('text-white');
+                $('.study').addClass('text-warning').removeClass('text-success');
+                $('.college').addClass('text-white');
+                $('.progress-bar').addClass('bg-warning').removeClass('bg-success');
+                $('.skill').addClass('text-white');
+                $('.service').addClass('bg-dark').removeClass('bg-light');
+                $('.icon').addClass('text-warning').removeClass('text-success');
+                $('.service-item').addClass('bg-secondary').removeClass('bg-white');
+                $('.service-name').addClass('text-white');
+                $('.service-detail').addClass('text-dark').removeClass('text-muted');
+                $('.portfolio').addClass('bg-dark').removeClass('bg-light');
+                $('.project-name').addClass('text-white').removeClass('text-dark');
+                $('.project-link').addClass('text-warning').removeClass('text-success');
+                $('.freelancer').addClass('bg-warning').removeClass('bg-success');
+                $('.contact').addClass('bg-dark').removeClass('bg-light');
+                $('.cont-type').addClass('text-white');
+                $('.footer').addClass('bg-secondary');
+                $('.footer-text').addClass('text-white').removeClass('text-muted');
+            } else {
+                $('.alert').addClass('alert-success').removeClass('alert-warning');
+                $('.navbar').addClass('bg-success').removeClass('bg-warning');
+                $('.btn').addClass('btn-success').removeClass('btn-warning');
+                $('.home').addClass('bg-light').removeClass('bg-dark');
+                $('.border').addClass('border-success').removeClass('border-warning');
+                $('.profession').addClass('text-success').removeClass('text-warning');
+                $('.name').addClass('text-dark').removeClass('text-white');
+                $('.about').addClass('bg-light').removeClass('bg-dark');
+                $('.heading').removeClass('text-white');
+                $('.study').addClass('text-success').removeClass('text-warning');
+                $('.college').removeClass('text-white');
+                $('.progress-bar').addClass('bg-success').removeClass('bg-warning');
+                $('.skill').removeClass('text-white');
+                $('.service').addClass('bg-light').removeClass('bg-dark');
+                $('.icon').addClass('text-success').removeClass('text-warning');
+                $('.service-item').addClass('bg-white').removeClass('bg-secondary');
+                $('.service-name').removeClass('text-white');
+                $('.service-detail').addClass('text-muted').removeClass('text-dark');
+                $('.portfolio').addClass('bg-light').removeClass('bg-dark');
+                $('.project-name').addClass('text-dark').removeClass('text-white');
+                $('.project-link').addClass('text-success').removeClass('text-warning');
+                $('.freelancer').addClass('bg-success').removeClass('bg-warning');
+                $('.contact').addClass('bg-light').removeClass('bg-dark');
+                $('.cont-type').removeClass('text-white');
+                $('.footer').removeClass('bg-secondary');
+                $('.footer-text').addClass('text-muted').removeClass('text-white');
+            }
+        });
+        // .addClass('bg-warning').removeClass('bg-success').addClass('text-warning').removeClass('text-success').addClass('btn-warning').removeClass('btn-success').addClass('border-warning').removeClass('border-success')
+
+    </script>
+</body>
+
+</html>
